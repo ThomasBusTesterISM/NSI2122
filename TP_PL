@@ -1,0 +1,55 @@
+nb_debut=int(input())
+nb_basen=int(input())
+liste=[]
+if nb_basen==10 :
+    print(nb_debut)
+if nb_basen==2 :
+    while ((nb_debut!=1) and (nb_debut!=-1)) :
+        quotient=nb_debut//nb_basen
+        reste=nb_debut%nb_basen
+        nb_debut=quotient
+        liste.append(reste)
+    liste.append(1)
+    liste.reverse()
+    print(liste)
+if nb_basen == 8 :
+    while (nb_debut>8) :
+        quotient=nb_debut//nb_basen
+        reste=nb_debut%nb_basen
+        nb_debut=quotient
+        liste.append(reste)
+    liste.append(nb_debut%nb_basen)
+    liste.reverse()
+    print(liste)
+if nb_basen == 16 :
+    while (nb_debut>16) :
+        quotient=nb_debut//nb_basen
+        reste=nb_debut%nb_basen
+        nb_debut=quotient
+        if reste == 10 :
+            reste=("A")
+        if reste == 11 :
+            reste=("B")
+        if reste == 12 :
+            reste=("C")
+        if reste == 13 :
+            reste=("D")
+        if reste == 14 :
+            reste=("E")
+        if reste == 15 :
+            reste=("F")
+        liste.append(reste)
+    if (nb_debut%nb_basen) == 10 :
+        liste.append("A")
+    if (nb_debut%nb_basen) == 11 :
+        liste.append("B")
+    if (nb_debut%nb_basen) == 12 :
+        liste.append("C")
+    if (nb_debut%nb_basen) == 13 :
+        liste.append("D")
+    if (nb_debut%nb_basen) == 14 :
+        liste.append("E")
+    if (nb_debut%nb_basen) == 15 :
+        liste.append("F")
+    liste.reverse()
+    print(liste)
